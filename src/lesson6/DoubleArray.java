@@ -10,6 +10,6 @@ public class DoubleArray {
 
                 int[] weekDays = { 1, 2, 3, 4, 5, 6, 7};
                 System.out.println("Понедельник " + weekDays[0] + "й день в недели.");
-            }
+    }
 }
 
