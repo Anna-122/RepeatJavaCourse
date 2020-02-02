@@ -7,10 +7,14 @@ c1  c2   c3  c4  c5  c6
  */
 package lesson6;
 
+import java.util.Scanner;
+
 public class Array3Method {
     public static void main( String[] args ) {
+        int Scan1=scanYourNum("Введите размерность массива х");
+        int Scan2=scanYourNum("Введите размерность массива y");
         System.out.println("Создаю массив и заполняю его значениями");
-        String[][] arr= createArray(3,6);
+        String[][] arr= createArray(Scan1, Scan2);
         System.out.println("Вывожу значения массива");
         arrayPrint(arr);
     }
@@ -21,8 +25,8 @@ public class Array3Method {
         char ch;
         String h1, h2, data = null;
 
-        for (i = 0; i < 3; i++) {
-            for (j = 0; j < 6; j++) {
+        for (i = 0; i < f; i++) {
+            for (j = 0; j < d; j++) {
                 ch = (char) (startOfCharCode + i);
                 h1 = String.valueOf(ch);
                 h2 = String.valueOf(j + 1);
@@ -43,4 +47,13 @@ public class Array3Method {
                 System.out.println("");
             }
         }
+    static int scanYourNum(String a) {
+        System.out.println(a);
+        int i = 0;
+        Scanner yourNum = new Scanner(System.in);
+        if (yourNum.hasNextInt()) {
+            i = yourNum.nextInt();
+        }
+        return i;
+    }
 }
