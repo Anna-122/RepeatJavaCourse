@@ -34,16 +34,13 @@ public class Array3Method {
     }
 
 
-        public static void arrayPrint( String[][] two2D ){
+        public static void arrayPrint( String[][] two2D ) {
 
             for (int i = 0; i < two2D.length; i++) {
-                System.out.println(two2D[i]);
+                for (int j = 0; j < two2D[0].length; j++) {
+                    System.out.print(" " + two2D[i][j] + " ");
+                }
+                System.out.println("");
             }
-            for (int j = 0; j < two2D.length; j++) {
-                System.out.println(two2D[j]);
-            }
-
         }
-
-
 }
